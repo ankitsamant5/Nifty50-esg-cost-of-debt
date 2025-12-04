@@ -94,7 +94,7 @@ This CSV is what feeds both the regression and the Power BI dashboard.
 
 ### 2. Regression Model
 
-I estimate an OLS model:
+I estimated an OLS model:
 
 \[
 \text{cost\_of\_debt}_i = \beta_0
@@ -163,21 +163,3 @@ This makes it easy to interactively explore how cost of debt varies by ESG profi
 
 ---
 
-## 🗂️ Repository Structure
-
-Suggested repo layout:
-
-```text
-nifty50-esg-cost-of-debt/
-├─ data_raw/
-│  ├─ final_data.csv                      # Original NIFTY50 ESG scores
-│  ├─ Detailed-Financials-Data-Of-4456-NSE-And-BSE-Company.zip
-├─ data_processed/
-│  └─ nifty50_esg_cost_of_debt.csv        # Final modeling dataset
-├─ notebooks/
-│  └─ 01_build_dataset_and_regression.ipynb
-├─ dashboard/
-│  └─ NIFTY50_ESG_CostOfDebt.pbix
-├─ docs/
-│  └─ report.md                           # Extended write-up
-└─ README.md
