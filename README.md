@@ -161,5 +161,25 @@ The Power BI report (e.g. `NIFTY50_ESG_CostOfDebt.pbix`) includes:
 
 This makes it easy to interactively explore how cost of debt varies by ESG profile and sector.
 
----
+## 🔎 Additional Predictive Models
+
+Beyond the baseline OLS regression, I also benchmarked several predictive models using the same feature set (`esg_risk_score`, `roa`, `leverage`, `size`) on an 80/20 train–test split:
+
+- **Ridge Regression**
+- **Lasso Regression**
+- **Random Forest Regressor**
+- **XGBoost Regressor**
+
+Test-set performance (approximate):
+
+- Ridge: R² ≈ -0.22, RMSE ≈ 0.060  
+- Lasso: R² ≈ -0.25, RMSE ≈ 0.060  
+- Random Forest: R² ≈ -3.94, RMSE ≈ 0.120  
+- XGBoost: R² ≈ -4.90, RMSE ≈ 0.131  
+
+A model with R² = 0 would perform as well as simply predicting the **mean** cost of debt on the test set, so the **negative R² values** indicate that none of these models reliably beat a simple baseline on this small sample. Ridge and Lasso are the most stable, while Random Forest and XGBoost clearly overfit.
+
+These results reinforce the main conclusion of the project:  
+> in this NIFTY50 snapshot, **cost of debt is difficult to predict from ESG risk and a small set of financial ratios alone**, and ESG does not emerge as a strong standalone driver of borrowing costs.
+
 
