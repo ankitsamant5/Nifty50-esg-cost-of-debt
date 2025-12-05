@@ -159,6 +159,8 @@ Test-set performance (approximate):
 
 A model with R² = 0 would perform as well as simply predicting the **mean** cost of debt on the test set, so the **negative R² values** indicate that none of these models reliably beat a simple baseline on this small sample. Ridge and Lasso are the most stable, while Random Forest and XGBoost clearly overfit.
 
+## Conclusion
+
 These results reinforce the main conclusion of the project:  
 > in this NIFTY50 snapshot, **cost of debt is difficult to predict from ESG risk and a small set of financial ratios alone**, and ESG does not emerge as a strong standalone driver of borrowing costs.
 > Overall, this project finds **no strong, portfolio-wide evidence** that higher ESG risk scores systematically translate into a higher cost of debt for NIFTY50 firms once basic financial controls (ROA, leverage, size) are included. In the baseline OLS model (R² ≈ 0.26), the ESG risk coefficient is directionally positive but statistically insignificant, and even more flexible predictive models (Ridge, Lasso, Random Forest, XGBoost) fail to deliver reliable out-of-sample performance, with negative test R² values that do not beat a simple mean baseline.
