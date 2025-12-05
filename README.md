@@ -161,5 +161,11 @@ A model with R² = 0 would perform as well as simply predicting the **mean** cos
 
 These results reinforce the main conclusion of the project:  
 > in this NIFTY50 snapshot, **cost of debt is difficult to predict from ESG risk and a small set of financial ratios alone**, and ESG does not emerge as a strong standalone driver of borrowing costs.
+> Overall, this project finds **no strong, portfolio-wide evidence** that higher ESG risk scores systematically translate into a higher cost of debt for NIFTY50 firms once basic financial controls (ROA, leverage, size) are included. In the baseline OLS model (R² ≈ 0.26), the ESG risk coefficient is directionally positive but statistically insignificant, and even more flexible predictive models (Ridge, Lasso, Random Forest, XGBoost) fail to deliver reliable out-of-sample performance, with negative test R² values that do not beat a simple mean baseline.
+
+However, when slicing the data by sector, a more nuanced picture emerges. Exploratory analysis suggests that **Healthcare** and **Industrials** exhibit a stronger apparent dependence of cost of debt on ESG risk scores, which is intuitively consistent with the higher financial materiality of ESG issues in these sectors (patient safety, regulation, environmental and safety risks). Given the small number of large-cap firms per sector in the NIFTY50, these sector-specific patterns should be treated as **indicative rather than conclusive**, but they point to a plausible story:  
+> ESG risk may matter most for financing costs in sectors where ESG issues are tightly linked to regulatory, legal, or environmental tail risks.
+
+In short, for large NIFTY50 firms, **ESG risk alone is not a dominant cross-sectional driver of borrowing costs at the index level**, but there are early signs that it may be more relevant within specific, ESG-sensitive sectors.
 
 
