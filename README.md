@@ -1,6 +1,6 @@
 # Nifty50-esg-cost-of-debt
 Analysis of ESG risk and cost of debt for NIFTY50 firms using Python and Power BI
-# NIFTY50 ESG Risk vs Cost of Debt 📉🌱
+# NIFTY50 ESG Risk vs Cost of Debt 
 
 This project investigates whether **ESG risk** is associated with a company’s **cost of debt** for firms in the **NIFTY50 index (India)**.  
 
@@ -12,13 +12,13 @@ Using **NIFTY50 ESG risk scores** and detailed **NSE/BSE financial statement dat
 
 ---
 
-## 🎯 Research Question
+## Research Question
 
 > Do firms with **higher ESG risk** pay a **higher cost of debt**, after controlling for profitability, leverage, and size?
 
 ---
 
-## 📂 Data
+## Data
 
 ### 1. ESG Data (NIFTY50)
 
@@ -111,7 +111,7 @@ I estimated an OLS model:
 
 ---
 
-## 🔍 Key Results (High Level)
+##  Key Results (High Level)
 
 - **Model fit**:  
   - R² ≈ **0.26**, Adjusted R² ≈ **0.19**  
@@ -131,7 +131,7 @@ I estimated an OLS model:
 
 ---
 
-## 📊 Power BI Dashboard
+## Power BI Dashboard
 
 The Power BI report (e.g. `NIFTY50_ESG_CostOfDebt.pbix`) includes:
 
@@ -161,7 +161,7 @@ The Power BI report (e.g. `NIFTY50_ESG_CostOfDebt.pbix`) includes:
 
 This makes it easy to interactively explore how cost of debt varies by ESG profile and sector.
 
-## 🔎 Additional Predictive Models
+##  Additional Predictive Models
 
 Beyond the baseline OLS regression, I also benchmarked several predictive models using the same feature set (`esg_risk_score`, `roa`, `leverage`, `size`) on an 80/20 train–test split:
 
