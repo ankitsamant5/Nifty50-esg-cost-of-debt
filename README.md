@@ -64,46 +64,26 @@ This CSV is what feeds both the regression and the Power BI dashboard.
 
 ---
 
-## 🧮 Methodology
+## Methodology
 
 ### 1. Variable Construction
 
 - **Cost of debt**  
-  \[
-  \text{cost\_of\_debt} = \frac{|\text{interest expense}|}{\text{borrowings}}
-  \]
+ 
   Interpreted as an approximate **interest rate on debt** (e.g., 0.08 ≈ 8%).
 
 - **Profitability (ROA)**  
-  \[
-  \text{roa} = \frac{\text{net profit}}{\text{total assets}}
-  \]
-
+ 
 - **Leverage**  
-  \[
-  \text{leverage} = \frac{\text{borrowings}}{\text{total assets}}
-  \]
-
+  
 - **Size**  
-  \[
-  \text{size} = \log(\text{total assets})
-  \]
-
+ 
 - **ESG Risk Bands (for visuals)**  
   Firms are bucketed into `"Low risk"`, `"Medium risk"`, `"High risk"` based on `esg_risk_score` thresholds or quartiles.
 
 ### 2. Regression Model
 
 I estimated an OLS model:
-
-\[
-\text{cost\_of\_debt}_i = \beta_0
-+ \beta_1 \,\text{esg\_risk\_score}_i
-+ \beta_2 \,\text{roa}_i
-+ \beta_3 \,\text{leverage}_i
-+ \beta_4 \,\text{size}_i
-+ \varepsilon_i
-\]
 
 - Dependent variable: `cost_of_debt`
 - Regressors: `esg_risk_score`, `roa`, `leverage`, `size`
